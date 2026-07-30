@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Thunderfrost</title>
+  <link rel="stylesheet" href="/static/style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h1>🌩 Thunderfrost Weather App</h1>
+
+    <div class="controls">
+      <select id="cityDropdown">
+        <option value="">-- Select a City --</option>
+        <option value="London">London</option>
+        <option value="New York">New York</option>
+        <option value="Tokyo">Tokyo</option>
+        <option value="Paris">Paris</option>
+        <option value="Sydney">Sydney</option>
+        <option value="Bengaluru">Bengaluru</option>
+        <option value="Mumbai">Mumbai</option>
+      </select>
+
+      <input type="text" id="cityInput" placeholder="Or type a city">
+      <button onclick="getWeather()">Get Weather</button>
+      <button onclick="resetAll()">Reset</button>
+    </div>
+
+    <div id="weatherInfo"></div>
+    <div id="animation"></div>
+
+    <canvas id="weatherChart" width="400" height="200"></canvas>
+  </div>
+
+  <script src="/static/app.js"></script>
+</body>
+</html>

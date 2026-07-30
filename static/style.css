@@ -1,0 +1,91 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #f0f4f8;
+  text-align: center;
+  margin: 0;
+  padding: 20px;
+}
+
+.container {
+  max-width: 700px;
+  margin: auto;
+  padding: 20px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.controls {
+  margin: 20px 0;
+}
+
+button {
+  margin-left: 5px;
+  padding: 6px 12px;
+  border: none;
+  background: #007BFF;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+}
+button:hover {
+  background: #0056b3;
+}
+
+#animation {
+  margin: 20px;
+  height: 100px;
+}
+
+.sun {
+  width: 80px;
+  height: 80px;
+  background: yellow;
+  border-radius: 50%;
+  margin: auto;
+  animation: spin 5s linear infinite;
+}
+
+.rain {
+  width: 5px;
+  height: 20px;
+  background: blue;
+  margin: auto;
+  animation: rainFall 1s linear infinite;
+}
+
+.snow {
+  width: 20px;
+  height: 20px;
+  background: white;
+  border-radius: 50%;
+  margin: auto;
+  animation: snowFall 2s linear infinite;
+}
+
+.hot {
+  font-size: 2em;
+  color: red;
+  animation: pulse 1s infinite;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes rainFall {
+  from { transform: translateY(0); }
+  to { transform: translateY(50px); }
+}
+
+@keyframes snowFall {
+  from { transform: translateY(0); opacity: 1; }
+  to { transform: translateY(50px); opacity: 0; }
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.2); }
+  100% { transform: scale(1); }
+}
